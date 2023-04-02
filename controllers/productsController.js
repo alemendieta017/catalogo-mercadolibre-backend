@@ -34,6 +34,7 @@ function getProducts(query) {
                     picture: item.thumbnail,
                     condition: item.condition,
                     free_shipping: Boolean(item.shipping.free_shipping),
+                    city: item.address.city_name,
                   }
                 })
             })
