@@ -5,10 +5,13 @@ const router = require('./routes')
 
 const PORT = process.env.PORT || 3000
 
-app.use(cors())
+app.use(cors({
+  origin : '*'
+}))
 
 app.use('/api', router)
 
+ 
 app.listen(PORT, function () {
   console.log('Server listening on port ' + PORT)
 })
